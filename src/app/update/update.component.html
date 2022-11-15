@@ -1,0 +1,28 @@
+<br>
+<h1 class="container">Product Edit Details</h1>
+<br>
+<div class="container">
+    <form [formGroup]="formProfile" (ngSubmit)="updateProduct()">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Enter Product name</label>
+          <input type="text" class="form-control"formControlName="productName" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Product name">
+          <small id="emailHelp" class="form-text text-muted"></small>
+        </div>
+        <br>
+       
+        <div class="form-group">
+            <label for="exampleInputPassword1"> Enter product category</label>
+            <input type="text" formControlName="productCategory" class="form-control" id="exampleInputPassword1" placeholder="product category">
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="exampleInputPassword1"> Enter Product Rate</label>
+            <input type="text" formControlName="productRate" class="form-control" id="exampleInputPassword1" placeholder="Enter Product Rate">
+          </div>
+<br>
+        <button type="submit" class="btn btn-primary">Update</button>
+        <br>
+        <div class="form-group">
+        </div>
+
+

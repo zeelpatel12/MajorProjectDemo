@@ -1,0 +1,64 @@
+
+<br>
+<div class="container">
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Product Id</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Product Category</th>
+        <th scope="col">Product Rate</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <tr>
+        <tr scope= "col" *ngFor= "let item of demoVar">
+         <td>{{item.productId}}</td>
+        <td>{{item.productName}}</td>
+        <td>{{item.productCategory}}</td>
+        <td>{{item.productRate}}</td>
+       <td><button routerLink="/update/{{item.productId}}" class="btn btn danger">Edit</button> 
+        <button class="btn btn danger" (click)="onClick(item.productId)">Delete</button></td>
+      </tr>
+
+     
+
+
+     
+
+
+<br>
+<h1 class="container">Product Add Details</h1>
+<div class="container">
+<form  [formGroup]="formProfile" (ngSubmit)="usdformSubmit()">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Enter Product name</label>
+      <input type="text" class="form-control"formControlName="productName" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Product name">
+      <small id="emailHelp" class="form-text text-muted"></small>
+    </div>
+    <br>
+   
+    <div class="form-group">
+        <label for="exampleInputPassword1"> Enter product category</label>
+        <input type="text" formControlName="productCategory" class="form-control" id="exampleInputPassword1" placeholder="product category">
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="exampleInputPassword1"> Enter Product Rate</label>
+        <input type="text" formControlName="productRate" class="form-control" id="exampleInputPassword1" placeholder="Enter Product Rate">
+      </div>
+<br>
+    <button type="submit" class="btn btn-primary">ADD</button>
+    <br>
+    <div class="form-group">
+    </div>
+
+
+
+    
+
+    <router-outlet></router-outlet>
+
+   
